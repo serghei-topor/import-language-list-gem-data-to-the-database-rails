@@ -1,7 +1,7 @@
 !!!
 %html
 	%head
-		%title= yield :page_title
+		%title= t('app_name')
 		= csrf_meta_tags
 
 		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -21,5 +21,10 @@
 						%span= t('rails_samples')
 					.navbar-collapse{class: 'collapse', id: 'main_navbar'}
 		.container
+			.alert.alert-info
+				This Rails sample shows how to migrate language_list (
+				= link_to 'https://github.com/lassebunk/gretel','https://github.com/lassebunk/gretel', target: '_BLANK'
+				) gem data into the database
+
 			%h1= yield :page_header
 			= yield

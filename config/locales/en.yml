@@ -33,3 +33,4 @@ en:
   rails_samples: Rails Samples
   yes: YES
   no: NO
+  app_name: Migrate language_list gem data into the database
