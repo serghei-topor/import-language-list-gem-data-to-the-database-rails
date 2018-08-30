@@ -1,0 +1,25 @@
+!!!
+%html
+	%head
+		%title= yield :page_title
+		= csrf_meta_tags
+
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+		= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+	%body
+		%nav{class: "navbar navbar-inverse navbar-static-top"}
+			.container
+				.navbar-header
+					%button{class: 'navbar-toggle collapsed', data: {toggle: 'collapse', target: '#main_navbar'}}
+						%span.sr-only (toggle)
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					= link_to root_path, class: 'navbar-brand' do
+						= image_tag ''
+						%span= t('rails_samples')
+					.navbar-collapse{class: 'collapse', id: 'main_navbar'}
+		.container
+			%h1= yield :page_header
+			= yield

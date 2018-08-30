@@ -1,0 +1,24 @@
+- content_for(:page_header, 'List of Languages')
+.table-responsive
+	%table.table.table-bordered.table-striped
+		%thead
+			%tr
+				%th= t('models.language.name')
+				%th= t('models.language.common_name')
+				- %w(iso_639_1 iso_639_2b iso_639_2t iso_639_3 is_common language_type).each do |f|
+					%th.text-center= t("models.language.#{f}")
+		%tbody
+			- @items.each do |item|
+				%tr
+					%td= item.name
+					%td= item.common_name
+					- %w(iso_639_1 iso_639_2b iso_639_2t iso_639_3).each do |f|
+						%td.text-center= item.send(f)
+					%td.text-center
+						%span.label{class: "label-#{item.is_common? ? 'success' : 'danger'}"}
+							= t("#{item.is_common? ? 'yes' : 'no'}")
+					%td.text-center= t("models.language.#{item.language_type}") unless item.language_type.blank?
+.row
+	.col-md-12
+		.text-center
+			= paginate @items, theme: 'bootstrap'

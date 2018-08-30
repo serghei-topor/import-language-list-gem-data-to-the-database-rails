@@ -1,0 +1,19 @@
+en:
+  models:
+    language:
+      id: ID
+      name: Name
+      common_name: Common Name
+      iso_639_1: ISO 639-1 Code
+      iso_639_2b: ISO 639-2b Code
+      iso_639_2t: ISO 639-2t Code
+      iso_639_3: ISO 639-3 Code
+      is_common: Is Common
+      language_type: Language Type
+      types:
+        ancient: Ancient
+        constructed: Constructed
+        extinct: Extinct
+        historical: Historical
+        living: Living
+        special: Special
