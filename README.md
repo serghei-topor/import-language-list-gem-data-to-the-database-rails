@@ -3,7 +3,7 @@ RoR project example that shows how to import language_list gem dump data to post
 
 In all my projects where I need to use list of international languages I use awesome gem ***languages_list*** https://github.com/scsmith/language_list. Sometimes languages should be stored in the database. In this I showed how to do a migration of languages_list data into the database.
 
-### Project Setup Steps: ###
+### Project Setup: ###
 
 #### Step 1. Install necessary gems ####
 ```
